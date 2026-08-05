@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using Automation.BDaq;
 using System.Diagnostics;
-using AI_StreamingAI;
+using AnalogRotator;
 
 enum TimeUnit { Nanosecond, Microsecond, Millisecond, Second };
 enum FrequencyUnit { Hz, KHz, MHz };

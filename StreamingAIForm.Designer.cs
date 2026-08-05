@@ -1,4 +1,4 @@
-namespace AI_StreamingAI
+namespace AnalogRotator
 {
    partial class StreamingAIForm
    {

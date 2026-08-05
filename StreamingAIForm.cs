@@ -19,7 +19,7 @@ using System.Security.Policy;
 using System.Diagnostics.Eventing.Reader;
 using File = System.IO.File;
 
-namespace AI_StreamingAI
+namespace AnalogRotator
 {
     public partial class StreamingAIForm : Form
     {
@@ -46,7 +46,7 @@ namespace AI_StreamingAI
         StreamWriter sw;
         StreamReader sr;
         TcpClient client;
-        bool DEMOMODE = false; // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        bool DEMOMODE = true; // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         double finalTmpTime;
         int minorRevCounter = 0;
         int imagesToDelete = 0;

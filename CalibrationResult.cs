@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace AI_StreamingAI
+namespace AnalogRotator
 {
     public partial class CalibrationResult : Form
     {

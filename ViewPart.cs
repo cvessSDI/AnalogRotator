@@ -10,7 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Access.Dao;
 
-namespace AI_StreamingAI
+namespace AnalogRotator
 {
     public partial class ViewPart : Form
     {

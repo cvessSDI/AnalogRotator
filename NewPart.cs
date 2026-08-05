@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Access.Dao;
-using static AI_StreamingAI.StreamingAIForm;
+using static AnalogRotator.StreamingAIForm;
 
-namespace AI_StreamingAI
+namespace AnalogRotator
 {
     public partial class NewPart : Form
     {

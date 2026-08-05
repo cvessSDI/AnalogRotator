@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AI_StreamingAI
+namespace AnalogRotator
 {
     public partial class About : Form
     {
