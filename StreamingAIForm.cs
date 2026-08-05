@@ -104,12 +104,6 @@ namespace AnalogRotator
             
         }
 
-        public StreamingAIForm(int deviceNumber)
-        {
-            InitializeComponent();
-            waveformAiCtrl1.SelectedDevice = new DeviceInformation(deviceNumber);
-        }
-
         /// <summary>
         /// Loads the form and calls the setup functions
         /// </summary>
@@ -150,6 +144,7 @@ namespace AnalogRotator
             ConfigureGraph();
             InitListView();
             voltagesCheckChanged();
+            threeGraphSwitch();
 
             try
             {
@@ -2948,6 +2943,11 @@ namespace AnalogRotator
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void chkTripleGraph_CheckedChanged(object sender, EventArgs e)
+        {
+            threeGraphSwitch();
+        }
+
+        private void threeGraphSwitch()
         {
             m_simpleGraph1.Clear();
             m_simpleGraph2.Clear();

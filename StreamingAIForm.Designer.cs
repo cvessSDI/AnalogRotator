@@ -169,6 +169,7 @@ namespace AnalogRotator
             this.btnCalibrationReject = new System.Windows.Forms.Button();
             this.btnCalibrationAccept = new System.Windows.Forms.Button();
             this.lblCalibrationResult = new System.Windows.Forms.Label();
+            this.m_eventCounterCtrl = new Automation.BDaq.EventCounterCtrl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_div)).BeginInit();
             this.pnlVoltageRange.SuspendLayout();
@@ -378,6 +379,7 @@ namespace AnalogRotator
             this.pnlVoltageRange.Controls.Add(this.radV5);
             this.pnlVoltageRange.Controls.Add(this.radV10);
             this.pnlVoltageRange.Controls.Add(this.lblVoltageRange);
+            this.pnlVoltageRange.Enabled = false;
             this.pnlVoltageRange.Location = new System.Drawing.Point(21, 80);
             this.pnlVoltageRange.Name = "pnlVoltageRange";
             this.pnlVoltageRange.Size = new System.Drawing.Size(65, 146);
@@ -758,6 +760,7 @@ namespace AnalogRotator
             // 
             // btnGetUniWestVals
             // 
+            this.btnGetUniWestVals.Enabled = false;
             this.btnGetUniWestVals.Location = new System.Drawing.Point(1347, 69);
             this.btnGetUniWestVals.Name = "btnGetUniWestVals";
             this.btnGetUniWestVals.Size = new System.Drawing.Size(131, 26);
@@ -771,6 +774,7 @@ namespace AnalogRotator
             this.tbcOptionPanel.Controls.Add(this.tabPage1);
             this.tbcOptionPanel.Controls.Add(this.tabPage2);
             this.tbcOptionPanel.Controls.Add(this.tabPage3);
+            this.tbcOptionPanel.Enabled = false;
             this.tbcOptionPanel.Location = new System.Drawing.Point(805, 90);
             this.tbcOptionPanel.Name = "tbcOptionPanel";
             this.tbcOptionPanel.SelectedIndex = 0;
@@ -1201,8 +1205,6 @@ namespace AnalogRotator
             // chkTripleGraph
             // 
             this.chkTripleGraph.AutoSize = true;
-            this.chkTripleGraph.Checked = true;
-            this.chkTripleGraph.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkTripleGraph.Location = new System.Drawing.Point(239, 7);
             this.chkTripleGraph.Name = "chkTripleGraph";
             this.chkTripleGraph.Size = new System.Drawing.Size(101, 19);
@@ -1317,6 +1319,7 @@ namespace AnalogRotator
             // cbxAmpInch
             // 
             this.cbxAmpInch.AutoSize = true;
+            this.cbxAmpInch.Enabled = false;
             this.cbxAmpInch.Location = new System.Drawing.Point(104, 61);
             this.cbxAmpInch.Name = "cbxAmpInch";
             this.cbxAmpInch.Size = new System.Drawing.Size(127, 34);
@@ -1470,6 +1473,7 @@ namespace AnalogRotator
             // 
             // btnAddPart
             // 
+            this.btnAddPart.Enabled = false;
             this.btnAddPart.Location = new System.Drawing.Point(1494, 101);
             this.btnAddPart.Name = "btnAddPart";
             this.btnAddPart.Size = new System.Drawing.Size(83, 40);
@@ -1510,6 +1514,7 @@ namespace AnalogRotator
             // cbxLoadUniwest
             // 
             this.cbxLoadUniwest.AutoSize = true;
+            this.cbxLoadUniwest.Enabled = false;
             this.cbxLoadUniwest.Location = new System.Drawing.Point(17, 40);
             this.cbxLoadUniwest.Name = "cbxLoadUniwest";
             this.cbxLoadUniwest.Size = new System.Drawing.Size(77, 34);
@@ -1521,8 +1526,7 @@ namespace AnalogRotator
             // chkLoadMSPlan
             // 
             this.chkLoadMSPlan.AutoSize = true;
-            this.chkLoadMSPlan.Checked = true;
-            this.chkLoadMSPlan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkLoadMSPlan.Enabled = false;
             this.chkLoadMSPlan.Location = new System.Drawing.Point(230, 54);
             this.chkLoadMSPlan.Name = "chkLoadMSPlan";
             this.chkLoadMSPlan.Size = new System.Drawing.Size(123, 49);
@@ -1532,6 +1536,7 @@ namespace AnalogRotator
             // 
             // BtnReconnectUniWest
             // 
+            this.BtnReconnectUniWest.Enabled = false;
             this.BtnReconnectUniWest.Location = new System.Drawing.Point(1494, 58);
             this.BtnReconnectUniWest.Name = "BtnReconnectUniWest";
             this.BtnReconnectUniWest.Size = new System.Drawing.Size(83, 38);
@@ -1565,6 +1570,7 @@ namespace AnalogRotator
             // 
             // BtnNullUniWest
             // 
+            this.BtnNullUniWest.Enabled = false;
             this.BtnNullUniWest.Location = new System.Drawing.Point(1494, 191);
             this.BtnNullUniWest.Name = "BtnNullUniWest";
             this.BtnNullUniWest.Size = new System.Drawing.Size(83, 38);
@@ -1649,6 +1655,10 @@ namespace AnalogRotator
             this.lblCalibrationResult.Text = "Please Select The Result for the Master Calibration.\r\nA temperary report to view " +
     "the calibration results has been made";
             this.lblCalibrationResult.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // m_eventCounterCtrl
+            // 
+            this.m_eventCounterCtrl._StateStream = ((Automation.BDaq.DeviceStateStreamer)(resources.GetObject("m_eventCounterCtrl._StateStream")));
             // 
             // StreamingAIForm
             // 
@@ -1861,6 +1871,7 @@ namespace AnalogRotator
         private System.Windows.Forms.TextBox cmbProbeType;
         private System.Windows.Forms.Button btnPartInfo;
         private System.Windows.Forms.CheckBox cbxLoadUniwest;
+        private Automation.BDaq.EventCounterCtrl m_eventCounterCtrl;
     }
 }
 

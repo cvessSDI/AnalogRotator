@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="waveformAiCtrl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>24, 18</value>
   </metadata>
   <data name="waveformAiCtrl1._StateStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -166,6 +166,21 @@
   <metadata name="tmrEndFileChecking.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>767, 17</value>
   </metadata>
+  <metadata name="m_eventCounterCtrl.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>283, 20</value>
+  </metadata>
+  <data name="m_eventCounterCtrl._StateStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFNBdXRvbWF0aW9uLkJEYXE0LCBWZXJzaW9uPTQuMC4wLjAsIEN1
+        bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NDYzZjU5MjhkNjAxODNhMAUBAAAAI0F1dG9tYXRp
+        b24uQkRhcS5EZXZpY2VTdGF0ZVN0cmVhbWVyCgAAAAxEZXZpY2VOdW1iZXILRGVzY3JpcHRpb24KRGV2
+        aWNlTW9kZQtNb2R1bGVJbmRleAlQcm9kdWN0SUQKRXRoZGFxRWRnZQdjaGFubmVsDGNoYW5uZWxDb3Vu
+        dAdlbmFibGVkDW5vaXNlRmlsdGVyZWQAAQAABAEAAAAHCAgIGUF1dG9tYXRpb24uQkRhcS5Qcm9kdWN0
+        SWQCAAAACAgBAQIAAAABAAAABgMAAAAQRGVtb0RldmljZSxCSUQjMAIAAAAAAAAABfz///8ZQXV0b21h
+        dGlvbi5CRGFxLlByb2R1Y3RJZAEAAAAHdmFsdWVfXwAIAgAAAAAAAAAGBQAAAAAAAAAAAQAAAAAJBgAA
+        AA8GAAAAAgAAAAEAAAs=
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>40</value>
   </metadata>
