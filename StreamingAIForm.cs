@@ -138,9 +138,9 @@ namespace AnalogRotator
             button_pause.Enabled = false;
             if(!DEMOMODE)
                 PortSetup();
-            LoadBinaryPrivateOptions();
-            if (!DEMOMODE)
-                GetRemainingCalibrationReqs();
+            //LoadBinaryPrivateOptions();
+            //if (!DEMOMODE)
+                //GetRemainingCalibrationReqs();
             ConfigureGraph();
             InitListView();
             voltagesCheckChanged();
@@ -304,7 +304,7 @@ namespace AnalogRotator
                 m_simpleGraph2.tolerance4 = Double.Parse(txt4Tolerance.Text);
                 m_simpleGraph3.tolerance4 = Double.Parse(txt4Tolerance.Text);
 
-                m_simpleGraph1.lowPass = Double.Parse(tbxLowPass.Text);
+                /*m_simpleGraph1.lowPass = Double.Parse(tbxLowPass.Text);
                 m_simpleGraph1.highPass = Double.Parse(tbxHighPass.Text);
 
                 m_simpleGraph2.lowPass = Double.Parse(tbxLowPass.Text);
@@ -312,7 +312,7 @@ namespace AnalogRotator
 
                 m_simpleGraph3.lowPass = Double.Parse(tbxLowPass.Text);
                 m_simpleGraph3.highPass = Double.Parse(tbxHighPass.Text);
-
+                */
 
             }
             catch
@@ -446,7 +446,7 @@ namespace AnalogRotator
         /// <param name="e"></param>
         private void button_start_Click(object sender, EventArgs e)
         {
-            if (cmbxPartNo.SelectedIndex == -1)
+            /*if (cmbxPartNo.SelectedIndex == -1)
             {
                 MessageBox.Show("No Part Selected");
                 return;
@@ -466,13 +466,13 @@ namespace AnalogRotator
             {
                 MessageBox.Show("The appropriate text boxes were not filled out\n. Please fill out P/N, S/N, and the Batch Number and try again.", "Preview File name error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
+            }*/
             if(chkGenReport.Checked && (!cbxVertical.Checked && !cbxHorizontal.Checked && !cbxDistance.Checked))
             {
                 MessageBox.Show("There were no graphs selected to save in the report. Please select at least one and try again.", "No Graphs Selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            ClearAllImageFilesInReports();
+            ClearAllImageFilesInReports(); // keeping just cause its simple 
             chkMasterPart.Enabled = false;
             if (!isPaused) { 
                 m_simpleGraph1.Clear();
@@ -483,7 +483,7 @@ namespace AnalogRotator
             finalFileToDelete = -1;
             ErrorCode err = ErrorCode.Success;
             minorRevCounter = 0;
-            m_simpleGraph1.VoltagesHigh = new List<double>();
+            /*m_simpleGraph1.VoltagesHigh = new List<double>();
             m_simpleGraph2.VoltagesHigh = new List<double>();
             m_simpleGraph3.VoltagesHigh = new List<double>();
 
@@ -509,7 +509,7 @@ namespace AnalogRotator
 
             m_simpleGraph1.timer = timer;
             m_simpleGraph2.timer = timer;
-            m_simpleGraph3.timer = timer;
+            m_simpleGraph3.timer = timer;*/
 
             err = waveformAiCtrl1.Prepare();
             m_xInc = 1.0 / waveformAiCtrl1.Conversion.ClockRate;
@@ -543,14 +543,14 @@ namespace AnalogRotator
             button_pause.Enabled = true;
             button_stop.Enabled = true;
             trackBar_div.Enabled = false;
-            chkTripleGraph.Enabled = false;
-            chkMasterPart.Enabled = false;
-            txtPN.Enabled = false;
-            tbcOptionPanel.Enabled = false;
-            radV10.Enabled = false;
-            radV5.Enabled = false;
-            radV2.Enabled = false;
-            radV1.Enabled = false;
+            //chkTripleGraph.Enabled = false;
+            //chkMasterPart.Enabled = false;
+            //txtPN.Enabled = false;
+            //tbcOptionPanel.Enabled = false;
+            //radV10.Enabled = false;
+            //radV5.Enabled = false;
+            //radV2.Enabled = false;
+            //radV1.Enabled = false;
 
             try
             {
@@ -662,21 +662,22 @@ namespace AnalogRotator
                 m_simpleGraph2.result = SimpleGraph.TestResult.ACCEPT;
                 m_simpleGraph3.result = SimpleGraph.TestResult.ACCEPT;
             }*/
-            if(!chkMasterPart.Checked)
+            /*if(!chkMasterPart.Checked)
             {
                 button_start.Enabled = true;
                 chkMasterPart.Enabled = true;
-            }
+            }*/
             button_pause.Enabled = false;
             button_stop.Enabled = false;
+            button_start.Enabled = true;
             trackBar_div.Enabled = true;
-            chkTripleGraph.Enabled = true;
-            txtPN.Enabled = true;
-            tbcOptionPanel.Enabled = true;
-            radV10.Enabled = true;
-            radV5.Enabled = true;
-            radV2.Enabled = true;
-            radV1.Enabled = true;
+            //chkTripleGraph.Enabled = true;
+            //txtPN.Enabled = true;
+            //tbcOptionPanel.Enabled = true;
+            //radV10.Enabled = true;
+            //radV5.Enabled = true;
+            //radV2.Enabled = true;
+            //radV1.Enabled = true;
                 
 
 
@@ -701,10 +702,10 @@ namespace AnalogRotator
             Debug.Print(finalTmpTime.ToString());
             timer.Stop();
 
-            if (chkMasterPart.Checked) { }
+            /*if (chkMasterPart.Checked) { }
             //GenerateFreshMasterCalibration(); //Moved this to where the accept button is located instead
             else
-                UpdateMasterCalibration();
+                UpdateMasterCalibration();*/
             if (chkGenReport.Checked)ExportToExcel();
 
             //printVoltages();
@@ -714,7 +715,7 @@ namespace AnalogRotator
             }
             catch
             { }
-            GetRemainingCalibrationReqs();
+            //GetRemainingCalibrationReqs();
             tmrStartFileChecking.Start();
         }
 
@@ -1968,7 +1969,7 @@ namespace AnalogRotator
             DateTime timeRemaining = DateTime.Parse(tmp);
             TimeSpan dur = DateTime.Now - timeRemaining;
             int timeLeft = (int)(((int)(dur.TotalHours) * 60) + ((int)(dur.Minutes)));
-            if (Int32.Parse(txtMinutesPerMaster.Text) - timeLeft <= 0)
+            /*if (Int32.Parse(txtMinutesPerMaster.Text) - timeLeft <= 0)
             {
                 lblMinUntilMaster.Text = "0";
                 lblMinUntilMaster.BackColor = Color.LightCoral;
@@ -1976,7 +1977,7 @@ namespace AnalogRotator
             else
             {
                 lblMinUntilMaster.Text = (Int32.Parse(txtMinutesPerMaster.Text) - timeLeft).ToString();
-            }
+            }*/
             srt.Close();
         }
 
@@ -1990,7 +1991,7 @@ namespace AnalogRotator
             bool exit = false;
             try
             {
-                GetRemainingCalibrationReqs();
+                //GetRemainingCalibrationReqs();
                 if (lblPartsUntilMaster.BackColor == Color.LightCoral || lblMinUntilMaster.BackColor == Color.LightCoral)
                     exit = true;
             }
@@ -2520,7 +2521,7 @@ namespace AnalogRotator
                 //else
                 //{
                     lastSelectedPart = cmbxPartNo.Text;
-                    GenerateEmptyMasterCalibration();
+                    //GenerateEmptyMasterCalibration();
                 //}
             }
             if(cbxAmpInch.Checked)

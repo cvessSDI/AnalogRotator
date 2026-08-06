@@ -441,10 +441,10 @@ System.Drawing.Pens.LightGray,  System.Drawing.Pens.MediumVioletRed,System.Drawi
                 if (((value >= tolerance4 || value <= -(tolerance4)) && /*channelNum !=3 && i !=2 &&*/ channelNum-1 == i) && index > drawPoint -sectionCount)
                 {
                     result = TestResult.REJECT;
-                    VoltagesHigh.Add(value);
-                    Times.Add(mainForm.getTimer());
-                    Tuple<Double,Double> values = new Tuple<Double,Double>(value, mainForm.getTimer());
-                    VoltTimeHigh.Add(values);
+                    //VoltagesHigh.Add(value);
+                    //Times.Add(mainForm.getTimer());
+                    //Tuple<Double,Double> values = new Tuple<Double,Double>(value, mainForm.getTimer());
+                    //VoltTimeHigh.Add(values);
                     //Debug.Print("High pass or Low pass triggered!");
                 }
                 else if(((value >= tolerance2 || value <= -(tolerance2)) && /*channelNum != 3 && i != 2 &&*/ channelNum - 1 == i)&& index  >drawPoint- sectionCount)
@@ -453,10 +453,10 @@ System.Drawing.Pens.LightGray,  System.Drawing.Pens.MediumVioletRed,System.Drawi
                     {
                         result = TestResult.RETEST;
                     }
-                    VoltagesMedium.Add(value);
-                    Times.Add(mainForm.getTimer());
-                    Tuple<Double, Double> values = new Tuple<Double, Double>(value, mainForm.getTimer());
-                    VoltTimeMed.Add(values);
+                    //VoltagesMedium.Add(value);
+                    //Times.Add(mainForm.getTimer());
+                    //Tuple<Double, Double> values = new Tuple<Double, Double>(value, mainForm.getTimer());
+                    //VoltTimeMed.Add(values);
                 }
             }
         }

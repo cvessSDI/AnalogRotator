@@ -927,6 +927,7 @@ namespace AnalogRotator
             this.txt4Tolerance.Name = "txt4Tolerance";
             this.txt4Tolerance.Size = new System.Drawing.Size(97, 21);
             this.txt4Tolerance.TabIndex = 9;
+            this.txt4Tolerance.Text = "8";
             // 
             // lbl4Tolerance
             // 
@@ -1023,6 +1024,7 @@ namespace AnalogRotator
             this.txtTolerance.Name = "txtTolerance";
             this.txtTolerance.Size = new System.Drawing.Size(74, 21);
             this.txtTolerance.TabIndex = 6;
+            this.txtTolerance.Text = "6";
             // 
             // lblTolerance
             // 
